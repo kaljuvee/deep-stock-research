@@ -12,7 +12,7 @@
 This project demonstrates how to build advanced AI research capabilities using LangChain's DeepAgent framework. Unlike simple chatbots, this system employs specialized sub-agents, systematic planning, and comprehensive tool integration to deliver professional-grade stock analysis.
 
 <!-- Add hero screenshot here -->
-![Demo](media/deepagent.mp4)
+![Demo](/deepagents.mp4)
 
 ### ✨ Key Features
 
@@ -209,12 +209,6 @@ RISK ASSESSMENT
 
 [Full detailed report continues...]
 ```
-
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
 
 
 ## 🚨 Disclaimer
