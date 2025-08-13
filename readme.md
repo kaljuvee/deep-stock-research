@@ -13,7 +13,8 @@ This project demonstrates how to build advanced AI research capabilities using L
 
 <!-- Add hero screenshot here -->
 [▶️ Watch the Demo](./deepagents.mp4)
-[▶️ Screenshots](./deepagents.jpg)
+
+![Screenshots](./screenshot.jpg)
 
 ### ✨ Key Features
 
