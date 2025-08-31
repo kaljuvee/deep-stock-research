@@ -228,18 +228,19 @@ def run_stock_research(query: str):
         logging.exception("[run_stock_research] Exception during invocation:")
         return f"Error: {str(e)}"
 
-# Create Gradio UI
-with gr.Blocks() as demo:
-    gr.Markdown("## 📊 Stock Research Agent")
-    gr.Markdown("Enter your stock research request below. Example: *Comprehensive analysis on Apple Inc. (AAPL)*")
-    
-    with gr.Row():
-        query_input = gr.Textbox(label="Research Query", lines=6, placeholder="Type your research query here...")
-    
-    run_button = gr.Button("Run Analysis")
-    output_box = gr.Textbox(label="Research Report", lines=20)
-    
-    run_button.click(fn=run_stock_research, inputs=query_input, outputs=output_box)
+if __name__ == "__main__":
+    # Create Gradio UI
+    with gr.Blocks() as demo:
+        gr.Markdown("## 📊 Stock Research Agent")
+        gr.Markdown("Enter your stock research request below. Example: *Comprehensive analysis on Apple Inc. (AAPL)*")
+        
+        with gr.Row():
+            query_input = gr.Textbox(label="Research Query", lines=6, placeholder="Type your research query here...")
+        
+        run_button = gr.Button("Run Analysis")
+        output_box = gr.Textbox(label="Research Report", lines=20)
+        
+        run_button.click(fn=run_stock_research, inputs=query_input, outputs=output_box)
 
-# Launch app
-demo.launch(server_name="0.0.0.0", server_port=7860)
+    # Launch app
+    demo.launch(server_name="0.0.0.0", server_port=7860)
