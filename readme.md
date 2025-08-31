@@ -90,11 +90,32 @@ This project demonstrates how to build advanced AI research capabilities using L
 
 4. **Run the application**
    ```bash
-   python researchagent.py
+   python research_agent.py
    ```
 
 5. **Open your browser**
    Navigate to `http://localhost:7860`
+
+### Run from the command line (no browser)
+
+- Ensure Ollama is running and the model is available:
+  ```bash
+  ollama serve
+  ollama pull gpt-oss
+  ```
+- Activate the virtualenv (or use `run_cli.sh`) and run queries:
+  ```bash
+  source .venv/bin/activate
+  python -m tests.simple_agent --debug "Quick overview and current price for MSFT."
+  # or
+  ./run_cli.sh --debug "Quick overview and current price for MSFT."
+  ```
+- Outputs are printed to stdout and also saved under `data/` with timestamped filenames.
+
+### Ollama HTTP requirement vs. in-process models
+
+- When using `ChatOllama`, the LLM runs locally via the Ollama server over HTTP at `127.0.0.1:11434`. Calls stay on your machine; an HTTP endpoint is still required for the API.
+- If you want zero-HTTP in-process inference, swap `ChatOllama` for `llama-cpp-python` or a Hugging Face `transformers` pipeline. This project uses Ollama by default.
 
 ## 📦 Dependencies
 
